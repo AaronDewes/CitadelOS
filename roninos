@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 install=false
 
 _generate_images() {
@@ -7,7 +9,7 @@ _generate_images() {
 		sudo buildarmimg -d "$i" -e RoninOS
 	done
 
-	sudo bash -c "cd /var/cache/manjaro-arm-tools/img" || exit 1
+	sudo bash -x -c "cd /var/cache/manjaro-arm-tools/img" || exit 1
 	for i in Manjaro-ARM-RoninOS-*.xz; do
 		sudo bash -c "sha256sum $i >sum"
 		test -f "${i}".asc && sudo rm "${i}".asc
@@ -24,7 +26,7 @@ while [ $# -gt 0 ]; do
 	--generate)
 		install=true;;
 	--user=*)
-		user=${1#*=}
+		user=${1#*=};;
 	esac
 	shift
 done
