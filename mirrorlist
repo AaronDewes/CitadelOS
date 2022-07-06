@@ -1,0 +1,275 @@
+##
+## Manjaro Linux default mirrorlist
+## Generated on 2022-07-01 04:20
+##
+## Please use 'pacman-mirrors -f [NUMBER] [NUMBER]' to modify mirrorlist
+## (Use 0 for all mirrors)
+##
+
+## Country : Ukraine
+Server = https://fastmirror.pp.ua/manjaro/arm-stable/$repo/$arch
+
+## Country : Russia
+Server = https://mirror.yandex.ru/mirrors/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : Portugal
+Server = https://mirrors.up.pt/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : Poland
+Server = https://repo.skni.umcs.pl/manjaro/arm-stable/$repo/$arch
+
+## Country : Canada
+Server = https://mirror.0xem.ma/manjaro/arm-stable/$repo/$arch
+
+## Country : Czechia
+Server = https://mirror.dkm.cz/manjaro/arm-stable/$repo/$arch
+
+## Country : United_Kingdom
+Server = https://mirror.cyberhost.uk/sites/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirror.alpix.eu/manjaro/arm-stable/$repo/$arch
+
+## Country : Brazil
+Server = https://manjaro.c3sl.ufpr.br/arm-stable/$repo/$arch
+
+## Country : Greece
+Server = https://ftp.cc.uoc.gr/mirrors/linux/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirror.math.princeton.edu/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : Iran
+Server = https://mirror.bardia.tech/manjaro/arm-stable/$repo/$arch
+
+## Country : Singapore
+Server = https://mirror.freedif.org/Manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirror.netcologne.de/manjaro/arm-stable/$repo/$arch
+
+## Country : Bulgaria
+Server = https://manjaro.ipacct.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Thailand
+Server = https://mirror.kku.ac.th/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirror.23m.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Costa_Rica
+Server = https://mirrors.ucr.ac.cr/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirror2.sandyriver.net/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://mnvoip.mm.fcix.net/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.aliyun.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Global
+Server = https://mirrors.manjaro.org/repo/arm-stable/$repo/$arch
+
+## Country : Japan
+Server = https://mirrors.xtom.jp/manjaro/arm-stable/$repo/$arch
+
+## Country : Canada
+Server = https://mirror.csclub.uwaterloo.ca/manjaro/arm-stable/$repo/$arch
+
+## Country : Bulgaria
+Server = https://mirrors.netix.net/manjaro/arm-stable/$repo/$arch
+
+## Country : India
+Server = https://mirrors.piconets.webwerks.in/manjaro-mirror/arm-stable/$repo/$arch
+
+## Country : Bulgaria
+Server = https://mirror.telepoint.bg/manjaro/arm-stable/$repo/$arch
+
+## Country : Italy
+Server = https://ct.mirror.garr.it/mirrors/manjaro/arm-stable/$repo/$arch
+
+## Country : Uruguay
+Server = https://manjaro.repo.cure.edu.uy/arm-stable/$repo/$arch
+
+## Country : India
+Server = https://mirror.albony.xyz/manjaro/arm-stable/$repo/$arch
+
+## Country : Canada
+Server = https://mirror.xenyth.net/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://repo.ialab.dsu.edu/manjaro/arm-stable/$repo/$arch
+
+## Country : Kenya
+Server = https://manjaro.mirror.liquidtelecom.com/arm-stable/$repo/$arch
+
+## Country : Canada
+Server = https://osmirror.org/manjaro/arm-stable/$repo/$arch
+
+## Country : Netherlands
+Server = https://manjaro.mirrors.lavatech.top/arm-stable/$repo/$arch
+
+## Country : Sweden
+Server = https://mirror.zetup.net/manjaro/arm-stable/$repo/$arch
+
+## Country : Russia
+Server = https://mirror.kamtv.ru/manjaro/arm-stable/$repo/$arch
+
+## Country : Poland
+Server = https://ftp.psnc.pl/linux/manjaro/arm-stable/$repo/$arch
+
+## Country : Netherlands
+Server = https://mirror.koddos.net/manjaro/arm-stable/$repo/$arch
+
+## Country : Austria
+Server = https://mirror.alwyzon.net/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.ustc.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : Spain
+Server = https://mirrors.ft.uam.es/manjaro/arm-stable/$repo/$arch
+
+## Country : Sweden
+Server = https://ftpmirror1.infania.net/mirror/manjaro/arm-stable/$repo/$arch
+
+## Country : Estonia
+Server = https://mirrors.xtom.ee/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://manjaro.moson.eu/arm-stable/$repo/$arch
+
+## Country : Switzerland
+Server = https://manjaro.osmir.ch/arm-stable/$repo/$arch
+
+## Country : Switzerland
+Server = https://mirror.init7.net/manjaro/arm-stable/$repo/$arch
+
+## Country : Russia
+Server = https://mirror.truenetwork.ru/manjaro/arm-stable/$repo/$arch
+
+## Country : Austria
+Server = https://mirror.easyname.at/manjaro/arm-stable/$repo/$arch
+
+## Country : Taiwan
+Server = https://mirror.archlinux.tw/Manjaro/arm-stable/$repo/$arch
+
+## Country : Belgium
+Server = https://mirror.futureweb.be/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirrors.xtom.de/manjaro/arm-stable/$repo/$arch
+
+## Country : South_Korea
+Server = https://mirror.funami.tech/manjaro/arm-stable/$repo/$arch
+
+## Country : Singapore
+Server = https://mirror.guillaumea.fr/manjaro/arm-stable/$repo/$arch
+
+## Country : Canada
+Server = https://muug.ca/mirror/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirror.nju.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirrors.sonic.net/manjaro/arm-stable/$repo/$arch
+
+## Country : Italy
+Server = https://ba.mirror.garr.it/mirrors/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://ftp.halifax.rwth-aachen.de/manjaro/arm-stable/$repo/$arch
+
+## Country : Georgia
+Server = https://repos.silknet.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Denmark
+Server = https://mirrors.dotsrc.org/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirror.informatik.tu-freiberg.de/manjaro/arm-stable/$repo/$arch
+
+## Country : Singapore
+Server = https://download.nus.edu.sg/mirror/manjaro/arm-stable/$repo/$arch
+
+## Country : Ukraine
+Server = https://manjaro.astra.in.ua/arm-stable/$repo/$arch
+
+## Country : Poland
+Server = https://ftp.icm.edu.pl/pub/Linux/dist/manjaro/arm-stable/$repo/$arch
+
+## Country : Sweden
+Server = https://ftp.lysator.liu.se/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : France
+Server = https://mirror.ibakerserver.pt/manjaro/arm-stable/$repo/$arch
+
+## Country : Global
+Server = https://mirrors.fossho.st/manjaro/arm-stable/$repo/$arch
+
+## Country : Iran
+Server = https://repo.iut.ac.ir/repo/manjaro/arm-stable/$repo/$arch
+
+## Country : Netherlands
+Server = https://ftp.nluug.nl/pub/os/Linux/distr/manjaro/arm-stable/$repo/$arch
+
+## Country : Italy
+Server = https://manjaro.mirror.garr.it/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://mirror.moson.org/manjaro/arm-stable/$repo/$arch
+
+## Country : United_States
+Server = https://mirrors.ocf.berkeley.edu/manjaro/arm-stable/$repo/$arch
+
+## Country : South_Korea
+Server = https://mirror.d-tl.com/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.huaweicloud.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Germany
+Server = https://ftp.gwdg.de/pub/linux/manjaro/arm-stable/$repo/$arch
+
+## Country : Chile
+Server = https://mirror.ufro.cl/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.pku.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : Spain
+Server = https://ftp.caliu.cat/pub/distribucions/manjaro/arm-stable/$repo/$arch
+
+## Country : China
+Server = https://mirrors.tuna.tsinghua.edu.cn/manjaro/arm-stable/$repo/$arch
+
+## Country : Australia
+Server = https://manjaro.lucassymons.net/arm-stable/$repo/$arch
+
+## Country : Chile
+Server = https://mirror1.cl.netactuate.com/manjaro/arm-stable/$repo/$arch
+
+## Country : Australia
+Server = https://mirror.aarnet.edu.au/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : Hungary
+Server = https://quantum-mirror.hu/mirrors/pub/manjaro/arm-stable/$repo/$arch
+
+## Country : MENA
+Server = https://mirror.arvancloud.com/manjaro/arm-stable/$repo/$arch
+
+## Country : United_Kingdom
+Server = https://www.mirrorservice.org/sites/repo.manjaro.org/repos/arm-stable/$repo/$arch
+
+## Country : Finland
+Server = https://manjaro.kyberorg.fi/arm-stable/$repo/$arch
+
