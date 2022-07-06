@@ -14,10 +14,32 @@ experiment:
       - branches
   variables:
   script:
+
+    #initial
     - set -ex
     - pwd
     - ls -la
-    - pacman -qS --noconfirm make wget
-    - make install
-    - ./roninos --generate
-    - echo "JOB DONE"
+    - sudo pacman-mirrors -f
+    - sudo pacman -Syyu --noconfirm
+
+    #mandatories
+    - sudo pacman -qS --noconfirm wget manjaro-arm-tools parted libarchive git manjaro-arm-qemu-static dosfstools polkit gnupg zstd arch-install-scripts
+    #optionals?
+    - sudo pacman -qS --noconfirm btrfs-progs
+
+    #  bmap-tools
+    - pacman -qS --noconfirm --needed base-devel sudo
+    - useradd builduser -m
+    - passwd -d builduser
+    - printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers 
+    - sudo -u builduser bash -c 'cd ~ && git clone https://aur.archlinux.org/bmap-tools.git && cd bmap-tools && makepkg -s --noconfirm'
+    #TODO: fix this
+    - sudo pacman -U --noconfirm /home/builduser/bmap-tools/bmap-tools-3.6-2-any.pkg.tar.zst
+
+    #prepare 
+    - sudo sed -i '2i set -ex' /usr/bin/buildarmimg
+
+    #generate the image
+    - ./roninos.generate.sh
+    # - ./roninos.sign.sh
+    - echo "Completed, files located at /var/cache/manjaro-arm-tools/img directory"

@@ -918,3 +918,28 @@ get_profiles() {
         clone_profiles $branch
     fi
 }
+
+checkroot () {
+    if [ "$EUID" -ne 0 ]; then
+        echo "This utility requires root permissions to run"
+        exit
+    fi
+}
+
+checkbranch () {
+    if [[ "$BRANCH" != "stable" && "$BRANCH" != "testing" && "$BRANCH" != "unstable" ]]; then
+    msg "Unknown branch, please use stable, testing or unstable"
+    exit 1
+    fi
+}
+
+checkrunning() {
+    for pid in $(pidof -x $PROGNAME); do
+        if [ $pid != $$ ]; then
+            echo "Process already running as PID $pid"
+            exit 1
+        fi
+    done
+}
+
+
