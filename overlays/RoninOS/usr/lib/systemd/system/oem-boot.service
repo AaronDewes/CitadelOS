@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=simple
 ExecStart=/usr/local/sbin/ronin-oem-fast.sh
 ExecStartPost=/usr/local/sbin/ronin-oem-teardown.sh
-StandardOutput=file:/usr/local/sbin/ronin-oem.log
+StandardOutput=journal
 
 [Install]
 WantedBy=multi-user.target
