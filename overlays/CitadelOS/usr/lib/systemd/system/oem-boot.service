@@ -1,12 +1,12 @@
 [Unit]
-Description=Ronin OEM Fast
+Description=Citadel OEM Fast
 After=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=simple
-ExecStart=/usr/local/sbin/ronin-oem-fast.sh
-ExecStartPost=/usr/local/sbin/ronin-oem-teardown.sh
+ExecStart=/usr/local/sbin/citadel-oem-fast.sh
+ExecStartPost=/usr/local/sbin/citadel-oem-teardown.sh
 StandardOutput=journal
 
 [Install]

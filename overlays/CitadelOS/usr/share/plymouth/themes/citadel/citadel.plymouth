@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Citadel
+Description=Manjaro Linux theme inspired by KDE Breeze
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/citadel
+ScriptFile=/usr/share/plymouth/themes/citadel/script
