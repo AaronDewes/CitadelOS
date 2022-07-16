@@ -14,29 +14,23 @@ zswap-arm
 # Minimal edition packages
 iwd
 
-# RoninDojo
+# Citadel
 git
 avahi
-pm2
-nginx
-jdk11-openjdk
-tor
-python3
+python
+python-yaml
+python-jsonschema
+python-semver
 fail2ban
 net-tools
 htop
-vim
 unzip
 which
 wget
 docker
-docker-compose
 ufw
 rsync
-nodejs-lts-fermium
 npm
 jq
-python-pipenv
 gptfdisk
-gcc
 nvme-cli
