@@ -4,7 +4,7 @@
 2) Install make with `sudo pacman -qS --noconfirm make`
 3) Run `make install` to install
 4) Edit "$HOME"/.gpg-passwd with password to RoninDojo gpg key
-5) Run `roninos --user="gpg@ronindojo.io" --generate`
+5) Run `citadelos --user="gpg@ronindojo.io" --generate`
 6) Run `shred -fuzn24 "$HOME"/.gpg-passwd` (optional but recommended)
 
 **To check on setup scripts:**

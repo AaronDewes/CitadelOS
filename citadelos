@@ -3,15 +3,15 @@
 install=false
 
 _generate_images() {
-	for i in on2 quartz64-bsp rpi4 rock64 rockpi4b rockpi4c rockpro64; do
-		sudo buildarmimg -d "$i" -e RoninOS
+	for i in quartz64-a quartz64-b rpi4 rock64 rockpi4b rockpi4c rockpro64 soquartz-cm4; do
+		sudo buildarmimg -d "$i" -e CitadelOS
 	done
 
 	sudo bash -c "cd /var/cache/manjaro-arm-tools/img" || exit 1
-	for i in Manjaro-ARM-RoninOS-*.xz; do
+	for i in Manjaro-ARM-CitadelOS-*.xz; do
 		sudo bash -c "sha256sum $i >sum"
 		test -f "${i}".asc && sudo rm "${i}".asc
-		gpg -u "${user:-gpg@ronindojo.io}" --output "${i}".asc --pinentry-mode=loopback --batch --passphrase "$(<"$HOME"/.gpg-passwd)" --clearsign sum
+		#gpg -u "${user:-gpg@ronindojo.io}" --output "${i}".asc --pinentry-mode=loopback --batch --passphrase "$(<"$HOME"/.gpg-passwd)" --clearsign sum
 		sudo rm sum
 	done
 	cd - || exit 1
