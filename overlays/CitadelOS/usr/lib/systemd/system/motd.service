@@ -1,5 +1,5 @@
 [Unit]
-Description=Setup RoninDojo Motd
+Description=Setup Citadel Motd
 After=oem-boot.service
 
 [Service]

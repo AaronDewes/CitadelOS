@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone='no'?><!--*-nxml-*-->
 <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-<!-- This advertises the RoninDojo vhost -->
+<!-- This advertises the Citadel vhost -->
 <service-group>
  <name replace-wildcards="yes">%h Web Application</name>
   <service>

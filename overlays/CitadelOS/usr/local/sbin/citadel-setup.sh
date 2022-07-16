@@ -1,27 +1,18 @@
 #!/bin/bash
 
 # Clone Repo
-git clone -b master https://code.samourai.io/ronindojo/RoninDojo
+git clone -b main https://github.com/runcitadel/core "$HOME"/citadel
 
 # Source files
-cd "$HOME"/RoninDojo || exit
+cd "$HOME"/citadel || exit
 
-. Scripts/defaults.sh
-. Scripts/functions.sh
-
-# Run main
-if _main; then
-    # Run system setup
-    Scripts/Install/install-system-setup.sh system
-
-    # Run RoninDojo install
-    Scripts/Install/install-dojo.sh dojo
-
-    # Restore getty
-    sudo mv /usr/lib/systemd/system/getty\@.service.bak /usr/lib/systemd/system/getty\@.service
-    sudo rm /etc/systemd/system/getty\@tty1.service.d/override.conf
-    sudo systemctl daemon-reload
-
-    sudo systemctl disable ronin-setup.service
-    sudo rm /etc/sudoers.d/99-nopasswd
-fi
+# Spin up a minimal web server in python to show that Citadel is booting
+./scripts/citadel-os/init
+# Download all dependencies
+./scripts/citadel-os/bootstrap
+# Configure OS to autostart Citadel
+./scripts/citadel-os/install
+# Stop webserver
+./scripts/citadel-os/stop-server
+# Start Citadel
+./scripts/citadel-os/start

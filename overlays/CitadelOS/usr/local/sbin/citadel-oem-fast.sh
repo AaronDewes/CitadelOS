@@ -1,38 +1,22 @@
 #!/bin/bash
 
 TMPDIR=/var/tmp
-USER="ronindojo"
-PASSWORD="$(tr -dc 'a-zA-Z0-9' </dev/urandom | head -c'21')"
-ROOTPASSWORD="$(tr -dc 'a-zA-Z0-9' </dev/urandom | head -c'21')"
-FULLNAME="RoninDojo"
+USER="citadel"
+FULLNAME="Citadel"
 TIMEZONE="UTC"
 LOCALE="en_US.UTF-8"
-HOSTNAME="RoninDojo"
+HOSTNAME="citadel"
 KEYMAP="us"
 
 create_oem_install() {
-    # Setting root password
-    chpasswd <<<"root:$ROOTPASSWORD"
-
     # Adding user $USER
     useradd -m -G wheel,sys,audio,input,video,storage,lp,network,users,power,docker -s /bin/bash "$USER" &>/dev/null
-
-    # Set User and WorkingDirectory in ronin-setup.service unit file
-    sed -i -e "s/User=.*$/User=${USER}/" \
-        -e "s/WorkingDirectory=.*$/WorkingDirectory=\/home\/${USER}/" /usr/lib/systemd/system/ronin-setup.service
 
     # Setting full name to $FULLNAME
     chfn -f "$FULLNAME" "$USER" &>/dev/null
 
     # Setting password for $USER
-    chpasswd <<<"$USER:$PASSWORD"
-
-    # Save Linux user credentials for UI access
-    mkdir -p /home/"${USER}"/.config/RoninDojo
-    cat <<EOF >/home/"${USER}"/.config/RoninDojo/info.json
-{"user":[{"name":"${USER}","password":"${PASSWORD}"},{"name":"root","password":"${ROOTPASSWORD}"}]}
-EOF
-    chown -R "${USER}":"${USER}" /home/"${USER}"/.config
+    chpasswd <<<"$USER:freedom"
 
     # Setting timezone to $TIMEZONE
     timedatectl set-timezone $TIMEZONE &>/dev/null
@@ -67,7 +51,7 @@ EOF
 
     # Avahi setup
     sed -i 's/hosts: .*$/hosts: files mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns mdns/' /etc/nsswitch.conf
-    sed -i 's/.*host-name=.*$/host-name=ronindojo/' /etc/avahi/avahi-daemon.conf
+    sed -i 's/.*host-name=.*$/host-name=citadel/' /etc/avahi/avahi-daemon.conf
     systemctl restart avahi-daemon
 
     if ! systemctl is-enabled --quiet avahi-daemon; then
@@ -102,5 +86,5 @@ echo -e "domain .local\nnameserver 1.1.1.1\nnameserver 1.0.0.1" >> /etc/resolv.c
 echo "OEM complete"
 cat /etc/motd
 
-systemctl enable --quiet --now ronin-setup.service
+systemctl enable --quiet --now citadel-setup.service
 systemctl disable --quiet oem-boot.service

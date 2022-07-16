@@ -3,10 +3,9 @@
 rm /etc/motd
 
 bash -c "cat <<EOF > /etc/motd
-Welcome to RoninDojo!
+Welcome to Citadel!
 
-Website:   ronindojo.io
-Wiki:      wiki.ronindojo.io
+Website:   runcitadel.space
 EOF"
 
 touch /tmp/motd-actived

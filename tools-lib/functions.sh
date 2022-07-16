@@ -329,11 +329,11 @@ create_rootfs_img() {
 
     info "Applying overlay for $EDITION edition..."
     cp -ap $PROFILES/arm-profiles/overlays/$EDITION/* $ROOTFS_IMG/rootfs_$ARCH/
-    #### Enable the RoninOS specific tweaks ###
+    #### Enable the CitadelOS specific tweaks ###
     $NSPAWN $ROOTFS_IMG/rootfs_$ARCH systemctl enable --quiet dhcpcd sshd avahi-daemon oem-boot motd
 
-    # Enable RoninDojo splash theme
-    $NSPAWN $ROOTFS_IMG/rootfs_$ARCH plymouth-set-default-theme -R ronindojo
+    # Enable Citadel splash theme
+    $NSPAWN $ROOTFS_IMG/rootfs_$ARCH plymouth-set-default-theme -R citadel
 
     info "Setting up system settings..."
     #system setup
@@ -347,7 +347,7 @@ create_rootfs_img() {
             $NSPAWN $ROOTFS_IMG/rootfs_$ARCH groupadd -r autologin
             $NSPAWN $ROOTFS_IMG/rootfs_$ARCH gpasswd -a "$USER" autologin
             ;;
-        minimal|server|RoninOS)
+        minimal|server|Citadel)
             echo "Enabling SSH login for root user for headless setup..."
             sed -i s/"#PermitRootLogin prohibit-password"/"PermitRootLogin yes"/g $ROOTFS_IMG/rootfs_$ARCH/etc/ssh/sshd_config
             sed -i s/"#PermitEmptyPasswords no"/"PermitEmptyPasswords yes"/g $ROOTFS_IMG/rootfs_$ARCH/etc/ssh/sshd_config
