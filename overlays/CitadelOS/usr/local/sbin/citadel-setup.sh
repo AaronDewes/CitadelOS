@@ -10,9 +10,6 @@ cd "$HOME"/citadel || exit
 ./scripts/citadel-os/init
 # Download all dependencies
 ./scripts/citadel-os/bootstrap
-# Configure OS to autostart Citadel
-./scripts/citadel-os/install
-# Stop webserver
-./scripts/citadel-os/stop-server
-# Start Citadel
-./scripts/citadel-os/start
+
+# Restart node
+sudo reboot
