@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f /tmp/citadel-activated ]; then
-   rm /tmp/citadel-activated
+if [ -f /tmp/motd-actived ]; then
+   rm /tmp/motd-actived
 else
    echo "Something went wrong"
 fi
