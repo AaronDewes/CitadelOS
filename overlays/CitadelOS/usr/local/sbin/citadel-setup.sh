@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Clone Repo
-git clone -b main https://github.com/runcitadel/core "$HOME"/citadel
+git clone -b citadel-os https://github.com/runcitadel/core "$HOME"/citadel
 
 # Source files
 cd "$HOME"/citadel || exit
